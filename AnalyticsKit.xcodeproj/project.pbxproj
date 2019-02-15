@@ -20,6 +20,10 @@
 		CE6003AE22172BFD00535B0E /* GAILogger.h in Headers */ = {isa = PBXBuildFile; fileRef = CE6003A422172BFC00535B0E /* GAILogger.h */; };
 		CE6003B322172C2000535B0E /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6003B122172C2000535B0E /* libGoogleAnalyticsServices.a */; };
 		CE6003B422172C2000535B0E /* libAdIdAccess.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6003B222172C2000535B0E /* libAdIdAccess.a */; };
+		CE6003B722172D0300535B0E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6003B622172D0300535B0E /* CoreData.framework */; };
+		CE6003B922172D0E00535B0E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6003B822172D0E00535B0E /* SystemConfiguration.framework */; };
+		CE6003BB22172D1E00535B0E /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6003BA22172D1E00535B0E /* libsqlite3.tbd */; };
+		CE6003BD22172D2B00535B0E /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6003BC22172D2B00535B0E /* libz.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,10 @@
 		CE6003A422172BFC00535B0E /* GAILogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAILogger.h; sourceTree = "<group>"; };
 		CE6003B122172C2000535B0E /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
 		CE6003B222172C2000535B0E /* libAdIdAccess.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdIdAccess.a; sourceTree = "<group>"; };
+		CE6003B622172D0300535B0E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		CE6003B822172D0E00535B0E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		CE6003BA22172D1E00535B0E /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		CE6003BC22172D2B00535B0E /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +53,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE6003BD22172D2B00535B0E /* libz.tbd in Frameworks */,
+				CE6003BB22172D1E00535B0E /* libsqlite3.tbd in Frameworks */,
+				CE6003B922172D0E00535B0E /* SystemConfiguration.framework in Frameworks */,
+				CE6003B722172D0300535B0E /* CoreData.framework in Frameworks */,
 				CE6003B322172C2000535B0E /* libGoogleAnalyticsServices.a in Frameworks */,
 				CE6003B422172C2000535B0E /* libAdIdAccess.a in Frameworks */,
 			);
@@ -58,6 +70,7 @@
 			children = (
 				CE60039022172B2500535B0E /* AnalyticsKit */,
 				CE60038F22172B2500535B0E /* Products */,
+				CE6003B522172D0200535B0E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,6 +133,17 @@
 				CE6003B122172C2000535B0E /* libGoogleAnalyticsServices.a */,
 			);
 			path = Libraries;
+			sourceTree = "<group>";
+		};
+		CE6003B522172D0200535B0E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE6003BC22172D2B00535B0E /* libz.tbd */,
+				CE6003BA22172D1E00535B0E /* libsqlite3.tbd */,
+				CE6003B822172D0E00535B0E /* SystemConfiguration.framework */,
+				CE6003B622172D0300535B0E /* CoreData.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
