@@ -46,6 +46,7 @@
 		CE6003B822172D0E00535B0E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		CE6003BA22172D1E00535B0E /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		CE6003BC22172D2B00535B0E /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		CE6003BE22172E3800535B0E /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +104,7 @@
 		CE60039A22172BD300535B0E /* GoogleAnalytics */ = {
 			isa = PBXGroup;
 			children = (
+				CE6003BE22172E3800535B0E /* module.modulemap */,
 				CE6003B022172C1000535B0E /* Libraries */,
 				CE6003AF22172C0400535B0E /* Headers */,
 			);
