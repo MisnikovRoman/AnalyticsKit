@@ -146,7 +146,7 @@ Pod::Spec.new do |s|
   # Source settings
   s.preserve_path       = 'AnalyticsKit/SourceFiles/module.modulemap'
   s.module_map          = 'AnalyticsKit/SourceFiles/module.modulemap'
-  s.pod_target_xcconfig = { 'HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/SourceFiles/AnalyticsKit', 'DEFINES_MODULE' => 'YES' }
-  s.xcconfig            = { 'HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/SourceFiles/AnalyticsKit' }
+  s.pod_target_xcconfig = { 'HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/AnalyticsKit/SourceFiles', 'DEFINES_MODULE' => 'YES' }
+  s.xcconfig            = { 'HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/AnalyticsKit/SourceFiles' }
 
 end
