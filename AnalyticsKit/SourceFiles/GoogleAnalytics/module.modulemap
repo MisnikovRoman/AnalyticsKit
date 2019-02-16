@@ -9,4 +9,5 @@ module AnalyticsKit {
     header "GAILogger.h"
     header "GAITrackedViewController.h"
     header "GAITracker.h"
+    export *
 }

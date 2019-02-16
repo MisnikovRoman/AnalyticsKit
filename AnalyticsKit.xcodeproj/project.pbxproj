@@ -24,6 +24,7 @@
 		CE6003B922172D0E00535B0E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6003B822172D0E00535B0E /* SystemConfiguration.framework */; };
 		CE6003BB22172D1E00535B0E /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6003BA22172D1E00535B0E /* libsqlite3.tbd */; };
 		CE6003BD22172D2B00535B0E /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6003BC22172D2B00535B0E /* libz.tbd */; };
+		CEA939CC22173E5F0009E651 /* AnalyticsKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA939CB22173E5F0009E651 /* AnalyticsKit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		CE6003BA22172D1E00535B0E /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		CE6003BC22172D2B00535B0E /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		CE6003BE22172E3800535B0E /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		CEA939CB22173E5F0009E651 /* AnalyticsKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsKit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				CE60039922172BBB00535B0E /* SourceFiles */,
 				CE60039122172B2500535B0E /* AnalyticsKit.h */,
 				CE60039222172B2500535B0E /* Info.plist */,
+				CEA939CB22173E5F0009E651 /* AnalyticsKit.swift */,
 			);
 			path = AnalyticsKit;
 			sourceTree = "<group>";
@@ -105,15 +108,6 @@
 			isa = PBXGroup;
 			children = (
 				CE6003BE22172E3800535B0E /* module.modulemap */,
-				CE6003B022172C1000535B0E /* Libraries */,
-				CE6003AF22172C0400535B0E /* Headers */,
-			);
-			path = GoogleAnalytics;
-			sourceTree = "<group>";
-		};
-		CE6003AF22172C0400535B0E /* Headers */ = {
-			isa = PBXGroup;
-			children = (
 				CE60039F22172BFC00535B0E /* GAI.h */,
 				CE6003A122172BFC00535B0E /* GAIDictionaryBuilder.h */,
 				CE60039E22172BFC00535B0E /* GAIEcommerceFields.h */,
@@ -124,8 +118,9 @@
 				CE6003A422172BFC00535B0E /* GAILogger.h */,
 				CE60039B22172BFC00535B0E /* GAITrackedViewController.h */,
 				CE60039D22172BFC00535B0E /* GAITracker.h */,
+				CE6003B022172C1000535B0E /* Libraries */,
 			);
-			path = Headers;
+			path = GoogleAnalytics;
 			sourceTree = "<group>";
 		};
 		CE6003B022172C1000535B0E /* Libraries */ = {
@@ -201,6 +196,7 @@
 				TargetAttributes = {
 					CE60038D22172B2500535B0E = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -236,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEA939CC22173E5F0009E651 /* AnalyticsKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,14 +364,18 @@
 		CE60039722172B2500535B0E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/AnalyticsKit/SourceFiles/GoogleAnalytics";
 				INFOPLIST_FILE = AnalyticsKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -384,26 +385,35 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/AnalyticsKit/SourceFiles/GoogleAnalytics/Libraries",
 				);
-				MODULEMAP_FILE = "$(SRCROOT)/AnalyticsKit/SourceFiles/GoogleAnalytics/module.modulemap";
+				MODULEMAP_FILE = "";
+				MODULEMAP_PRIVATE_FILE = "$(SRCROOT)/AnalyticsKit/SourceFiles/GoogleAnalytics/module.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = com.RFMisnikov.AnalyticsKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/AnalyticsKit/SourceFiles/GoogleAnalytics/Headers";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = "";
+				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/AnalyticsKit/SourceFiles/GoogleAnalytics";
 			};
 			name = Debug;
 		};
 		CE60039822172B2500535B0E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/AnalyticsKit/SourceFiles/GoogleAnalytics";
 				INFOPLIST_FILE = AnalyticsKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -413,12 +423,16 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/AnalyticsKit/SourceFiles/GoogleAnalytics/Libraries",
 				);
-				MODULEMAP_FILE = "$(SRCROOT)/AnalyticsKit/SourceFiles/GoogleAnalytics/module.modulemap";
+				MODULEMAP_FILE = "";
+				MODULEMAP_PRIVATE_FILE = "$(SRCROOT)/AnalyticsKit/SourceFiles/GoogleAnalytics/module.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = com.RFMisnikov.AnalyticsKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/AnalyticsKit/SourceFiles/GoogleAnalytics/Headers";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = "";
+				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/AnalyticsKit/SourceFiles/GoogleAnalytics";
 			};
 			name = Release;
 		};
