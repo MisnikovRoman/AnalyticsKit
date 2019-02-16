@@ -19,7 +19,6 @@
 		CE6003AD22172BFD00535B0E /* GAIEcommerceProductAction.h in Headers */ = {isa = PBXBuildFile; fileRef = CE6003A322172BFC00535B0E /* GAIEcommerceProductAction.h */; };
 		CE6003AE22172BFD00535B0E /* GAILogger.h in Headers */ = {isa = PBXBuildFile; fileRef = CE6003A422172BFC00535B0E /* GAILogger.h */; };
 		CE6003B322172C2000535B0E /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6003B122172C2000535B0E /* libGoogleAnalyticsServices.a */; };
-		CE6003B422172C2000535B0E /* libAdIdAccess.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6003B222172C2000535B0E /* libAdIdAccess.a */; };
 		CE6003B722172D0300535B0E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6003B622172D0300535B0E /* CoreData.framework */; };
 		CE6003B922172D0E00535B0E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6003B822172D0E00535B0E /* SystemConfiguration.framework */; };
 		CE6003BB22172D1E00535B0E /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6003BA22172D1E00535B0E /* libsqlite3.tbd */; };
@@ -42,7 +41,6 @@
 		CE6003A322172BFC00535B0E /* GAIEcommerceProductAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceProductAction.h; sourceTree = "<group>"; };
 		CE6003A422172BFC00535B0E /* GAILogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAILogger.h; sourceTree = "<group>"; };
 		CE6003B122172C2000535B0E /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
-		CE6003B222172C2000535B0E /* libAdIdAccess.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdIdAccess.a; sourceTree = "<group>"; };
 		CE6003B622172D0300535B0E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		CE6003B822172D0E00535B0E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		CE6003BA22172D1E00535B0E /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
@@ -61,7 +59,6 @@
 				CE6003B922172D0E00535B0E /* SystemConfiguration.framework in Frameworks */,
 				CE6003B722172D0300535B0E /* CoreData.framework in Frameworks */,
 				CE6003B322172C2000535B0E /* libGoogleAnalyticsServices.a in Frameworks */,
-				CE6003B422172C2000535B0E /* libAdIdAccess.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,7 +107,6 @@
 		CE6003B022172C1000535B0E /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				CE6003B222172C2000535B0E /* libAdIdAccess.a */,
 				CE6003B122172C2000535B0E /* libGoogleAnalyticsServices.a */,
 			);
 			path = Libraries;
