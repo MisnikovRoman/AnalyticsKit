@@ -136,7 +136,7 @@ Pod::Spec.new do |s|
   # ――― Custom Settings ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
   # Libraries
-  s.vendored_libraries = "AnalyticsKit/Libraries/*.a"
+  s.vendored_libraries = "AnalyticsKit/SourceFiles/Libraries/*.a"
   s.frameworks = ['CoreData', 'SystemConfiguration']
   s.libraries = ['z', 'sqlite3']
 
@@ -144,9 +144,9 @@ Pod::Spec.new do |s|
   s.static_framework = true
 
   # Source settings
-  s.preserve_path       = 'AnalyticsKit/module.modulemap'
-  s.module_map          = 'AnalyticsKit/module.modulemap'
-  s.pod_target_xcconfig = { 'HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/AnalyticsKit', 'DEFINES_MODULE' => 'YES' }
-  s.xcconfig            = { 'HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/AnalyticsKit' }
+  s.preserve_path       = 'AnalyticsKit/SourceFiles/module.modulemap'
+  s.module_map          = 'AnalyticsKit/SourceFiles/module.modulemap'
+  s.pod_target_xcconfig = { 'HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/SourceFiles/AnalyticsKit', 'DEFINES_MODULE' => 'YES' }
+  s.xcconfig            = { 'HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/SourceFiles/AnalyticsKit' }
 
 end
