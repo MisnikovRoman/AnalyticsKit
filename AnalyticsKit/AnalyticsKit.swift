@@ -13,7 +13,7 @@ class AnalyticsKit {
     static let shared = AnalyticsKit()
     
     func test() {
-        guard let gai = GAI.sharedInstance() else { return }
+        guard let _ = GAI.sharedInstance() else { return }
         print("Analytics is working 🎉")
     }
 }
