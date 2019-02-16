@@ -88,25 +88,7 @@
 		CE60039022172B2500535B0E /* AnalyticsKit */ = {
 			isa = PBXGroup;
 			children = (
-				CE60039922172BBB00535B0E /* SourceFiles */,
-				CE60039122172B2500535B0E /* AnalyticsKit.h */,
-				CE60039222172B2500535B0E /* Info.plist */,
-				CEA939CB22173E5F0009E651 /* AnalyticsKit.swift */,
-			);
-			path = AnalyticsKit;
-			sourceTree = "<group>";
-		};
-		CE60039922172BBB00535B0E /* SourceFiles */ = {
-			isa = PBXGroup;
-			children = (
-				CE60039A22172BD300535B0E /* GoogleAnalytics */,
-			);
-			path = SourceFiles;
-			sourceTree = "<group>";
-		};
-		CE60039A22172BD300535B0E /* GoogleAnalytics */ = {
-			isa = PBXGroup;
-			children = (
+				CE6003B022172C1000535B0E /* Libraries */,
 				CE6003BE22172E3800535B0E /* module.modulemap */,
 				CE60039F22172BFC00535B0E /* GAI.h */,
 				CE6003A122172BFC00535B0E /* GAIDictionaryBuilder.h */,
@@ -118,9 +100,11 @@
 				CE6003A422172BFC00535B0E /* GAILogger.h */,
 				CE60039B22172BFC00535B0E /* GAITrackedViewController.h */,
 				CE60039D22172BFC00535B0E /* GAITracker.h */,
-				CE6003B022172C1000535B0E /* Libraries */,
+				CE60039122172B2500535B0E /* AnalyticsKit.h */,
+				CE60039222172B2500535B0E /* Info.plist */,
+				CEA939CB22173E5F0009E651 /* AnalyticsKit.swift */,
 			);
-			path = GoogleAnalytics;
+			path = AnalyticsKit;
 			sourceTree = "<group>";
 		};
 		CE6003B022172C1000535B0E /* Libraries */ = {
@@ -372,7 +356,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/AnalyticsKit/SourceFiles/GoogleAnalytics";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/AnalyticsKit";
 				INFOPLIST_FILE = AnalyticsKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -383,18 +367,18 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/AnalyticsKit/SourceFiles/GoogleAnalytics/Libraries",
+					"$(PROJECT_DIR)/AnalyticsKit/Libraries",
 				);
-				MODULEMAP_FILE = "$(SRCROOT)/AnalyticsKit/SourceFiles/GoogleAnalytics/module.modulemap";
+				MODULEMAP_FILE = "$(SRCROOT)/AnalyticsKit/module.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = com.RFMisnikov.AnalyticsKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/AnalyticsKit/SourceFiles/GoogleAnalytics/Headers";
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/AnalyticsKit";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				SYSTEM_FRAMEWORK_SEARCH_PATHS = "";
 				TARGETED_DEVICE_FAMILY = 1;
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/AnalyticsKit/SourceFiles/GoogleAnalytics";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/AnalyticsKit";
 			};
 			name = Debug;
 		};
@@ -409,7 +393,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/AnalyticsKit/SourceFiles/GoogleAnalytics";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/AnalyticsKit";
 				INFOPLIST_FILE = AnalyticsKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -420,17 +404,17 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/AnalyticsKit/SourceFiles/GoogleAnalytics/Libraries",
+					"$(PROJECT_DIR)/AnalyticsKit/Libraries",
 				);
-				MODULEMAP_FILE = "$(SRCROOT)/AnalyticsKit/SourceFiles/GoogleAnalytics/module.modulemap";
+				MODULEMAP_FILE = "$(SRCROOT)/AnalyticsKit/module.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = com.RFMisnikov.AnalyticsKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/AnalyticsKit/SourceFiles/GoogleAnalytics/Headers";
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/AnalyticsKit";
 				SWIFT_VERSION = 4.2;
 				SYSTEM_FRAMEWORK_SEARCH_PATHS = "";
 				TARGETED_DEVICE_FAMILY = 1;
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/AnalyticsKit/SourceFiles/GoogleAnalytics";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/AnalyticsKit";
 			};
 			name = Release;
 		};

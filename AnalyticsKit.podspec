@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "AnalyticsKit"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "Analytics Wrapper"
 
   # This description is used to generate tags and improve search results.
@@ -136,7 +136,7 @@ Pod::Spec.new do |s|
   # ――― Custom Settings ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
   # Libraries
-  s.vendored_libraries = "AnalyticsKit/SourceFiles/GoogleAnalytics/Libraries/*.a"
+  s.vendored_libraries = "AnalyticsKit/Libraries/*.a"
   s.frameworks = ['CoreData', 'SystemConfiguration']
   s.libraries = ['z', 'sqlite3']
 
@@ -144,9 +144,9 @@ Pod::Spec.new do |s|
   s.static_framework = true
 
   # Source settings
-  s.preserve_path       = 'AnalyticsKit/SourceFiles/GoogleAnalytics/module.modulemap'
-  s.module_map          = 'AnalyticsKit/SourceFiles/GoogleAnalytics/module.modulemap'
-  s.pod_target_xcconfig = { 'HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/AnalyticsKit/SourceFiles/GoogleAnalytics', 'DEFINES_MODULE' => 'YES' }
-  s.xcconfig            = { 'HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/AnalyticsKit/SourceFiles/GoogleAnalytics' }
+  s.preserve_path       = 'AnalyticsKit/module.modulemap'
+  s.module_map          = 'AnalyticsKit/module.modulemap'
+  s.pod_target_xcconfig = { 'HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/AnalyticsKit', 'DEFINES_MODULE' => 'YES' }
+  s.xcconfig            = { 'HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/AnalyticsKit' }
 
 end
