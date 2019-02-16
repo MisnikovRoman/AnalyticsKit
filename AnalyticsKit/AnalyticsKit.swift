@@ -8,12 +8,14 @@
 
 import Foundation
 
-class AnalyticsKit {
+public class AnalyticsKit
+{
     private init () {}
-    static let shared = AnalyticsKit()
     
-    func test() {
-        guard let _ = GAI.sharedInstance() else { return }
-        print("Analytics is working 🎉")
+    public static let shared = AnalyticsKit()
+    
+    public func test() -> Bool {
+        guard let _ = GAI.sharedInstance() else { return false }
+        return true
     }
 }
